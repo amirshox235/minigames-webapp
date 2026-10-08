@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Games</title>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <div>
+            <h1>🎮 Mini Games</h1>
+            <p id="username">Игрок</p>
+        </div>
+
+        <div class="coins">
+            💰 <span id="coins">100</span>
+        </div>
+    </header>
+
+
+    <section class="profile-card">
+
+        <div class="avatar" id="avatar">
+            👤
+        </div>
+
+        <div>
+            <h2 id="name">Игрок</h2>
+            <p>🏆 Побед: <span id="wins">0</span></p>
+        </div>
+
+    </section>
+
+
+    <h2 class="title">🎮 Игры</h2>
+
+    <div class="games">
+
+        <button class="game-card" onclick="openGame('rps')">
+            <span>✊</span>
+            <b>КНБ</b>
+            <small>Камень • Бумага • Ножницы</small>
+        </button>
+
+        <button class="game-card" onclick="openGame('dice')">
+            <span>🎲</span>
+            <b>Кубики</b>
+            <small>Брось кубик против соперника</small>
+        </button>
+
+        <button class="game-card" onclick="openGame('coin')">
+            <span>🪙</span>
+            <b>Орёл / Решка</b>
+            <small>Угадай сторону</small>
+        </button>
+
+        <button class="game-card" onclick="openGame('target')">
+            <span>🎯</span>
+            <b>Попади в цель</b>
+            <small>Попробуй угадать число</small>
+        </button>
+
+    </div>
+
+
+    <button class="friend" onclick="friendGame()">
+        👥 Играть с другом
+    </button>
+
+
+    <nav>
+
+        <button onclick="showHome()">
+            🏠
+            <span>Главная</span>
+        </button>
+
+        <button onclick="showRating()">
+            🏆
+            <span>Рейтинг</span>
+        </button>
+
+        <button onclick="showProfile()">
+            👤
+            <span>Профиль</span>
+        </button>
+
+    </nav>
+
+</div>
+
+<div id="gameScreen" class="game-screen">
+
+    <button class="close" onclick="closeGame()">✕</button>
+
+    <div id="gameContent"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
